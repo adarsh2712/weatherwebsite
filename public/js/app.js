@@ -1,4 +1,4 @@
-console.log('client side javascript file is loaded')
+
 
 // fetch('http://puzzle.mean.io/puzzle').then((response) => {
 //     response.json().then((data) => {
