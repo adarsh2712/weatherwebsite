@@ -5,6 +5,9 @@ const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
 const app = express()
+const port = process.env.PORT || 3000
+
+
 const publicpath = path.join(__dirname, '../public')
 const partialpath = path.join(__dirname, '../partials')
 
@@ -16,7 +19,7 @@ hbs.registerPartials(partialpath)
 app.get('', (req, res) => {
 
     res.render('index', {
-        title: 'weather app',
+        title: 'Weather App',
         name: 'adarsh'
     })
 })
@@ -25,7 +28,7 @@ app.get('/about', (req, res) => {
 
     res.render('about', {
 
-        title: 'about',
+        title: 'About',
         name: 'adarsh'
 
     })
@@ -36,7 +39,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
 
 
-        title: 'HELP',
+        title: 'Help',
         name: 'Adarsh'
 
     })
@@ -116,7 +119,7 @@ app.get('*', (req, res) => {
     })
 
 })
-app.listen(3000, () => {
+app.listen(port, () => {
 
     console.log('server is up and running')
 })
